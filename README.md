@@ -57,7 +57,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
 ### 1. 部署 Cloudflare Worker：
 
    - 在 Cloudflare Worker 控制台中创建一个新的 Worker。
-   - 将 [worker.js](https://github.com/newuser-collab/WorkerVless2sub/refs/heads/main/_worker.js)  的内容粘贴到 Worker 编辑器中。
+   - 将 [worker.js](https://raw.github.com/newuser-collab/WorkerVless2sub/refs/heads/main/_worker.js)  的内容粘贴到 Worker 编辑器中。
 
 
 ### 2. 修改 快速订阅入口 以及 添加内置 Vless 节点信息：
