@@ -34,8 +34,8 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
 
    - 添加变量 `ADDAPI`/`ADDNOTLSAPI` 为 **优选IP地址txt文件** 的 URL。例如：
    ```url
-   https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt
-   https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesipv6api.txt
+   https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressesapi.txt
+   https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressesipv6api.txt
    ```
 
 <details>
@@ -43,7 +43,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
 
    - 添加变量 `ADDCSV` 为 **iptest测速结果csv文件地址** 的 URL。例如：
    ```js
-   https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv
+   https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressescsv.csv
    ```
    - 添加变量 `DLS` ，意为`ADDCSV`满足最低速度的要求，不满足改数值以上的IP将不会添加至优选订阅内容。注意：不考虑单位，只看数值，请按照您的测速结果而定。例如：
    ```js
@@ -57,7 +57,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
 ### 1. 部署 Cloudflare Worker：
 
    - 在 Cloudflare Worker 控制台中创建一个新的 Worker。
-   - 将 [worker.js](https://github.com/cmliu/WorkerVless2sub/blob/main/_worker.js)  的内容粘贴到 Worker 编辑器中。
+   - 将 [worker.js](https://github.com/newuser-collab/WorkerVless2sub/refs/heads/main/_worker.js)  的内容粘贴到 Worker 编辑器中。
 
 
 ### 2. 修改 快速订阅入口 以及 添加内置 Vless 节点信息：
@@ -89,11 +89,11 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
  - 修改 `addressesapi` 参数，在脚本中设置 `addressesapi` 变量为 **优选IP地址txt文件** 的 URL。例如：
 	```js
 	let addressesapi = [
-		'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt',
+		'https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressesapi.txt',
  		'https://addressesapi.090227.xyz/CloudFlareYes',
 	];
 	```
-	可参考 [addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) 内容格式 自行搭建。
+	可参考 [addressesapi.txt](https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressesapi.txt) 内容格式 自行搭建。
 
 
 <details>
@@ -106,7 +106,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
 	```js
 	let DLS = 4;//速度下限
 	let addressescsv = [
-		'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv',
+		'https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressescsv.csv',
  		'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv',
 	];
 	```
@@ -161,7 +161,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)，**感谢[Alice Networ
 | UUID | b7a392e2-4ef0-4496-90bc-1c37bb234904 | 快速订阅内置节点的UUID | 
 | PATH | /?ed=2560 | 快速订阅内置节点的路径信息 | 
 | ADD | icook.tw:2053#官方优选域名 | 对应`addresses`字段 (支持多元素, 元素之间使用`,`作间隔) | 
-| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) | 对应`addressesapi`字段 (支持多元素, 元素之间使用`,`作间隔) | 
+| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/newuser-collab/WorkerVless2sub/refs/heads/main/addressesapi.txt) | 对应`addressesapi`字段 (支持多元素, 元素之间使用`,`作间隔) | 
 | ADDNOTLS | icook.hk:8080#官方优选域名 | 对应`addressesnotls`字段 (支持多元素, 元素之间使用`,`作间隔) | 
 | ADDNOTLSAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt) | 对应`addressesnotlsapi`字段 (支持多元素, 元素之间使用`,`作间隔) | 
 | ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv) | 对应`addressescsv`字段 (支持多元素, 元素之间使用`,`作间隔) | 
